@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/webp" href="DALL·E 2025-02-03 19.08.29 - A delicious strawberry ice cream scoop in a waffle cone with a bright red cherry on top. The ice cream appears creamy and rich, slightly melting at th.webp">
+    <title>Icy Treats!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('The_Krusty_Krab.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        /* Removed nav styles */
+    </style>
+</head>
+
+<body>
+    <!-- Removed nav element -->
+</body>
+
+</html>
+        <!-- Menu items go here -->
+    </div>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/webp" href="Krusty_Krab_logo.webp">
+    <title>Icy Treats!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('image_2GAjlA1h_1738585555463_raw.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            margin-top: px;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Light background to make it readable */
+            border-radius: 16px;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            max-width: 1200px;
+            width: 90%;
+        }
+
+        .product-box {
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            padding: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            /* Add cursor pointer */
+        }
+
+        .product-box img {
+            border-radius: 8px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .product-box h1 {
+            font-size: 1.2em;
+            color: #333;
+            margin: 8px 0;
+        }
+
+        .product-box h2 {
+            font-size: 1em;
+            color: green;
+            margin: 4px 0;
+        }
+
+        .menu-link {
+            display: block;
+            text-align: center;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: white;
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .menu-link:hover {
+            background-color: #f0f0f0;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 300px;
+            margin-bottom: 20px;
+        }
+
+        .lightbox-content h1,
+        .lightbox-content h2 {
+            margin: 10px 0;
+        }
+
+        .checkout-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .checkout-container h3 {
+            margin: 0 0 10px 0;
+        }
+
+        .checkout-container ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 10px 0;
+        }
+
+        .checkout-container ul li {
+            margin: 5px 0;
+        }
+
+        .checkout-container button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .add-to-basket {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .checkout-total {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .flash-message {
+            display: none;
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            z-index: 1001;
+            text-align: center;
+            font-size: 24px;
+            justify-content: center;
+            align-items: center;
+            animation: dropDown 1s forwards;
+        }
+
+        .intro {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1002;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            animation: fadeInZoom 2s forwards;
+        }
+
+        .intro img {
+            max-width: 80%;
+            max-height: 80%;
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeInZoom {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes dropDown {
+            0% {
+                top: -100%;
+            }
+
+            100% {
+                top: 0;
+            }
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="intro" id="intro">
+        <img src="Icyeyfcuwlhsfj.jpg" alt="The Krusty Krab Shop">
+        <p>Welcome to the Icy Treats Shop! Click the screen
+            to get started!
+        </p>
+    </div>
+    <style>
+        .menu-container {
+            display: 100px;
+            gap: 10px;
+            margin-top:100px; /* Move the grid down */
+        }
+    
+        .product-box {
+            padding: 10px; /* Smaller padding */
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+    
+        .product-box img {
+            max-width: 100%;
+            height: 100px;
+        }
+    </style>
+    
+    <div class="menu-container">
+        <div class="product-box">
+            <img src="DALL·E 2025-02-03 18.58.14 - A delicious chocolate ice cream scoop in a waffle cone with a bright red cherry on top. The ice cream appears creamy and rich, slightly melting at the.webp" alt="Krabby Patty">
+            <h1>Chocolate Icecream (Cherry)</h1>
+            <h2>$1.50</h2>
+            <button class="add-to-basket">Add to basket</button>
+        </div>
+        <div class="product-box">
+            <img src="DALL·E 2025-02-03 19.03.12 - A delicious chocolate ice cream scoop in a waffle cone. The ice cream appears creamy and rich, slightly melting at the edges. The waffle cone has a cr.webp" alt="Coral Bits">
+            <h1>Chocolate Icecream</h1>
+            <h2>$1.00</h2>
+            <button class="add-to-basket">Add to basket</button>
+        </div>
+        <div class="product-box">
+            <img src="DALL·E 2025-02-03 19.06.34 - A delicious strawberry ice cream scoop in a waffle cone. The ice cream appears creamy and rich, slightly melting at the edges, with a soft pink color.webp" alt="Krusty Krab Pizza">
+            <h1>Strawberry Icecream</h1>
+            <h2>$1.00</h2>
+            <button class="add-to-basket">Add to basket</button>
+        </div>
+        <div class="product-box">
+            <img src="DALL·E 2025-02-03 19.08.29 - A delicious strawberry ice cream scoop in a waffle cone with a bright red cherry on top. The ice cream appears creamy and rich, slightly melting at th.webp" alt="Kelp Fries">
+            <h1>Strawberry Icecream (Cherry)</h1>
+            <h2>$1.50</h2>
+            <button class="add-to-basket">Add to basket</button>
+        </div>
+        <div class="product-box">
+            <img src="image1_0.jpg" alt="Double Krabby Patty">
+            <h1>Vanilla Icecream</h1>
+            <h2>$1.00</h2>
+            <button class="add-to-basket">Add to basket</button>
+        </div>
+        <div class="product-box">
+            <img src="image1_0.jpg" alt="Dr.Kelp">
+            <h1>Vanilla Icecream</h1>
+            <h2>$1.50</h2>
+            <button class="add-to-basket">Add to basket</button>
+        </div>
+       
+    </div>
+    <div class="lightbox">
+        <div class="lightbox-content">
+            <img src="" alt="">
+            <h1></h1>
+            <h2></h2>
+        </div>
+    </div>
+    <div class="checkout-container">
+        <h3>Checkout</h3>
+        <ul id="checkout-list"></ul>
+        <div class="checkout-total" id="checkout-total">Total: $0.00</div>
+        <button id="checkout-button">Checkout</button>
+    </div>
+    <div class="flash-message" id="flash-message">You dont have enough money. Spongebob is going to get you now</div>
+    <audio id="game-over-sound" src="game_over.mp3"></audio>
+    <script>
+        $(document).ready(function () {
+            $('#intro').fadeIn().delay(3000).fadeOut();
+
+            $(document).one('click', function () {
+                $('#intro-sound')[0].play();
+            });
+
+            var checkoutItems = [];
+
+            $('.product-box').click(function () {
+                var imgSrc = $(this).find('img').attr('src');
+                var title = $(this).find('h1').text();
+                var price = $(this).find('h2').text();
+                $('.lightbox img').attr('src', imgSrc);
+                $('.lightbox h1').text(title);
+                $('.lightbox h2').text(price);
+                $('.lightbox').fadeIn();
+            });
+
+            $('.lightbox').click(function () {
+                $(this).fadeOut();
+            });
+
+            $('.add-to-basket').click(function () {
+                var $productBox = $(this).closest('.product-box');
+                var title = $productBox.find('h1').text();
+                var price = $productBox.find('h2').text();
+                checkoutItems.push({ title: title, price: parseFloat(price.replace('$', '')) });
+                updateCheckoutList();
+            });
+
+            $('#checkout-button').click(function () {
+                var total = checkoutItems.reduce(function (sum, item) {
+                    return sum + item.price;
+                }, 0);
+                if (total > 100) {
+                    $('#flash-message').fadeIn().delay(3000).fadeOut();
+                    $('#game-over-sound')[0].play();
+                    $('#intro-sound')[0].pause();
+                    $('#intro-sound')[0].currentTime = 0;
+                } else {
+                    alert('Checkout complete! Total: $' + total.toFixed(2));
+                    checkoutItems = [];
+                    updateCheckoutList();
+                }
+            });
+
+            function updateCheckoutList() {
+                var $checkoutList = $('#checkout-list');
+                var $checkoutTotal = $('#checkout-total');
+                $checkoutList.empty();
+                var total = 0;
+                checkoutItems.forEach(function (item) {
+                    $checkoutList.append('<li>' + item.title + ' - $' + item.price.toFixed(2) + '</li>');
+                    total += item.price;
+                });
+                $checkoutTotal.text('Total: $' + total.toFixed(2));
+            }
+        });
+    </script>
+</body>
+
+</html>
